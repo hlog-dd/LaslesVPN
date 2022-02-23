@@ -792,6 +792,11 @@ body {
     height: 165px;
     object-fit: cover;
     margin-bottom: 30px; }
+    @media only screen and (max-width: 475px) {
+      .plan__img {
+        width: 100px;
+        height: 120px;
+        margin-bottom: 15px; } }
   .plan__heading {
     font-weight: 500;
     font-style: normal;

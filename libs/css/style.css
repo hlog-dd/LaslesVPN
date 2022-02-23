@@ -1000,7 +1000,7 @@ body {
   line-height: 30px;
   margin-right: 12px; }
 .testimonial .swiper-container {
-  padding-left: 2px; }
+  padding: 0 0 8px 2px; }
 .testimonial .swiper-wrapper {
   margin-bottom: 60px; }
   @media only screen and (max-width: 991px) {
@@ -1052,7 +1052,7 @@ body {
       width: 40px;
       height: 40px; } }
   .testimonial .swiper-button-next:hover, .testimonial .swiper-button-prev:hover {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); }
 .testimonial .swiper-button-prev {
   background-color: #fff !important;
   border: 1px solid #F53838;

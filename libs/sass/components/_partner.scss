@@ -1,0 +1,41 @@
+.partner {
+    padding: 110px 0 124px 0;
+
+    overflow: hidden;
+
+    @include respon_992 {
+        padding-top: 78px;
+    }
+
+    @include respon_768 {
+        padding-top: 30px;
+    }
+
+    @include respon_425 {
+        padding: 0 0 50px;
+    }
+
+    @include respon_700 {
+        padding: 20px 0 50px;
+    }
+
+    @include respon_375 {
+        padding: 20px 0 36px;
+    }
+
+    img {
+        cursor: pointer;
+        max-width: 190px;
+        width: 100%;
+        height: 60px;
+        object-fit: contain;
+
+        @include respon_768 {
+            max-width: 128px;
+        }
+    }
+
+    .swiper-container-android .swiper-slide, .swiper-wrapper {
+        text-align: center;
+    }
+}

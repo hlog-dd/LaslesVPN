@@ -1,0 +1,67 @@
+@mixin absCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin respon_320() {
+    @media #{$res_320} {
+        @content;
+    }
+}
+
+@mixin respon_375() {
+    @media #{$res_375} {
+        @content;
+    }
+}
+
+@mixin respon_475() {
+    @media #{$res_475} {
+        @content;
+    }
+}
+
+@mixin respon_576() {
+    @media #{$res_576} {
+        @content;
+    }
+}
+
+@mixin respon_700() {
+    @media #{$res_700} {
+        @content;
+    }
+}
+
+@mixin respon_425() {
+    @media #{$res_425} {
+        @content;
+    }
+}
+
+@mixin respon_768() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+
+@mixin respon_992() {
+    @media #{$res_992} {
+        @content;
+    }
+}
+
+@mixin respon_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}
+
+@mixin respon_1200() {
+    @media #{$res_1200} {
+        @content;
+    }
+}

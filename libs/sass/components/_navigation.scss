@@ -1,0 +1,206 @@
+.navigation {
+    display: none;
+
+    @include respon_768 {
+        display: block;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: $color-white;
+        height: 60px;
+        width: 60px;
+        position: fixed;
+        top: 90px;
+        right: 60px;
+        border-radius: 50%;
+        z-index: 2000;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 1rem 3rem rgba($color-black, .15);
+
+        @include respon_768 {
+            top: 95px;
+            right: 40px;
+        }
+
+        @include respon_700 {
+            right: 40px;
+        }
+
+        @include respon_375 {
+            right: 26px;
+        }
+
+        @include respon_475 {
+            width: 50px;
+            height: 50px;
+            right: 24px;
+        }
+    }
+
+    &__background {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        position: fixed;
+        top: 92px;
+        right: 63px;
+        background-image: radial-gradient($color-primary, #dbaeb2);
+        z-index: 1500;
+        transition: transform .8s;
+
+        @include respon_768 {
+            top: 98px;
+            right: 42px;
+        }
+
+        @include respon_700 {
+            right: 40px;
+        }
+
+        @include respon_375 {
+            right: 24px;
+        }
+
+        @include respon_475 {
+            height: 45px;
+            width: 45px;
+            right: 27px;
+        }
+    }
+
+    &__checkbox:checked~&__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked~&__nav {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+    }
+
+    &__nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+        opacity: 0;
+        visibility: hidden;
+        width: 0%;
+        transition: all .8s;
+    }
+
+    &__list {
+        @include absCenter;
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        margin: 10px;
+
+        @include respon_475 {
+            margin: 0;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 400;
+            padding: 10px 20px;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            background-image:
+                radial-gradient(150% 200% ellipse at 115%,
+                    $color-white 0%,
+                    $color-white 50%,
+                    transparent 50%);
+            background-size: 252%;
+            border-radius: 50px;
+            transition: all .5s linear;
+
+            @include respon_475 {
+                font-size: 24px;
+            }
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary;
+            transform: translateX(10px);
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 28px;
+
+        @include respon_475 {
+            margin-top: 24px;
+        }
+
+        &,
+        &::before,
+        &::after {
+            width: 35px;
+            height: 3px;
+            background-color: $color-primary;
+            display: inline-block;
+
+            @include respon_475 {
+                width: 26px;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .3s;
+        }
+
+        &::before {
+            top: -8px;
+        }
+
+        &::after {
+            top: 8px;
+        }
+
+    }
+
+    &__button:hover &__icon::before {
+        top: -10px;
+    }
+
+    &__button:hover &__icon::after {
+        top: 10px;
+    }
+
+    // Khong phai before va after la dau gach giua
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}

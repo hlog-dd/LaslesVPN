@@ -1,0 +1,86 @@
+.start {
+    position: relative;
+    
+    @include respon_700 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .heading-primary, .paragraph {
+        @include respon_700 {
+            max-width: 500px;
+            text-align: center;
+            margin: 0 auto 15px;
+        }
+    }
+
+    &__content {
+       max-width: 555px;
+       width: 100%;
+       padding-top: 20px;
+
+        @include respon_992 {
+            max-width: 497px;
+        }
+
+        @include respon_768 {
+            max-width: 392px;
+        }
+
+        @include respon_700 {
+            max-width: 100%;
+        }
+    }
+
+    &__bg {
+        background: url("../img/background-01.png") no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: -40px;
+        max-width: 611px;
+        width: 100%;
+        height: 382px;
+
+        &--mobile {
+            display: none;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+
+            @include respon_700 {
+                display: block;
+            }
+        }
+
+        @include respon_1200 {
+            right: 0;
+            max-width: 555px;
+        }
+
+        @include respon_992 {
+            z-index: -1;
+        }
+
+        @include respon_768 {
+            height: 345px;
+            max-width: 438px;
+        }
+
+        @include respon_425 {
+            height: 300px;
+        }
+
+        @include respon_700 {
+            display: none;
+        }
+    }
+
+    span {
+        font-weight: 500;
+    }
+
+}

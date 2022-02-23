@@ -1,0 +1,204 @@
+.footer {
+    background: $background-color-grey;
+    padding: 180px 0 100px;
+    margin-top: -110px;
+
+    @include respon_425 {
+        padding: 156px 0 60px;
+    }
+
+    @include respon_700 {
+        padding-bottom: 0;
+    }
+
+    @include respon_375 {
+        padding-top: 136px;
+    }
+
+    .container {
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+
+        @include respon_700 {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        max-width: 340px;
+        width: 100%;
+
+        @include respon_768 {
+            max-width: 277px;
+        }
+
+        @include respon_700 {
+            max-width: 100%;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex: 2;
+        justify-content: end;
+
+        @include respon_700 {
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+    }
+
+    .paragraph {
+        margin-bottom: 30px;
+
+        @include respon_700 {
+            margin-bottom: 15px;
+        }
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 20px;
+
+        @include respon_375 {
+            margin-bottom: 12px;
+        }
+
+        img {
+            width: 149px;
+            height: 36px;
+
+            @include respon_375 {
+                width:  130px;
+                height: 32px;
+            }
+        }
+    }
+
+    &__copyright {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        color: #AFB5C0;
+
+        @include respon_700 {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+
+            @include respon_700 {
+                display: block;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 30px;
+                color: #AFB5C0;
+                text-align: center;
+            }
+        }
+    }
+
+    &__social {
+        &--list {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        &--item:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &--link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 33.6px;
+            height: 33.6px;
+            background: $color-white;
+            border-radius: 50%;
+            transition: all .3s;
+
+            &:hover{
+                transform: translateY(-3px);
+                box-shadow: 0 5px 10px rgba($color: #000000, $alpha: .10);
+            }
+        }
+
+        &--icon {
+            color: $color-primary;
+        }
+    }
+
+    &__right {
+        &--block:not(:last-child) {
+            margin-right: 126px;
+
+            @include respon_768 {
+                margin-right: 52px;
+            }
+
+            @include respon_425 {
+                margin-right: 35px;
+            }
+
+            @include respon_475 {
+                margin-right: 0;
+            }
+        }
+
+        &--item:not(:last-child) {
+            margin-bottom: 4px;
+        }
+
+        &--head {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+            font-style: normal;
+            color: $color-black;
+            margin-bottom: 15px;
+
+            @include respon_425 {
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 10px;
+            }
+
+            @include respon_375 {
+                font-size: 14px;
+                margin-bottom: 2px;
+            }
+        }
+
+
+        &--link {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            font-style: normal;
+            color: $color-black-light;
+
+           
+
+            @include respon_425 {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            @include respon_375 {
+                font-size: 12px;
+            }
+        }
+    }
+}

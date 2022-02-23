@@ -1,0 +1,98 @@
+.plan {
+    text-align: center;
+
+    .paragraph {
+        max-width: 555px;
+        width: 100%;
+        margin: 0 auto 60px;
+
+        @include respon_700 {
+            margin-bottom: 30px;
+        }
+
+        @include respon_475 {
+            max-width: 333px;
+        }
+    }
+
+    &__box {
+        background: $color-white;
+        border-radius: 10px;
+        border: 2px solid #dddddd;
+        transition: all .2s linear;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: 79px;
+        
+        @include respon_425 {
+            padding-top: 42px;
+        }
+        
+        &:hover {
+            border: 2px solid $color-primary;
+            cursor: pointer;
+        }
+    }
+
+    &__img {
+        width: 145px;
+        height: 165px;
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
+
+    &__heading {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 30px;
+        color: $color-black;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        min-height: 230px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        img {
+            margin-right: 14.2px;
+        }
+
+        p {
+            margin: 0;
+            color: $color-black-light;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        margin: 50px 0 20px;
+        display: block;
+
+        span {
+            font-weight: 400;
+            color: $color-black-light;
+        }
+
+        @include respon_768 {
+            margin: 0 0 20px;
+        }
+
+        @include respon_375 {
+            font-size: 22px;
+        }
+    }
+}

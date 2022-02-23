@@ -1,0 +1,205 @@
+.btn {
+    padding: 13px 45px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    font-style: normal;
+    color: $color-black;
+    transition: all .3s linear;
+
+    @include respon_992 {
+        padding: 13px 36px;
+    }
+
+    @include respon_425 {
+        padding: 10px 30px;
+    }
+
+    @include respon_475 {
+        padding: 8px 20px;
+    }
+
+    &:focus, &:focus-visible{
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    &--active {
+        border-radius: 20px;
+        border: 1px solid $color-primary;
+        color: $color-primary;
+    }
+
+    &--red {
+        color: $color-primary;
+    }
+
+    &--bg-red {
+        background: $color-primary;
+        color: $color-white;
+        border-radius: 10px;
+        padding: 17.5px 65px;
+
+        &:hover {
+            box-shadow: 8px 26px 26px rgba(245, 56, 56, 0.35)
+        }
+    }
+
+    &--head {
+        border-radius: 30px;
+        height: 45px;
+        line-height: 0;
+        overflow: hidden;
+
+        &:hover {
+            background: $color-primary;
+            color: $color-white;
+        }
+
+
+        @include respon_475 {
+            height: 36px;
+            font-size: 14px;
+        }
+    }
+
+    &--start {
+        margin-top: 34px;
+        padding: 17.5px 77.5px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 0;
+        height: 60px;
+
+        @include respon_768 {
+            padding: 17px 47px;
+        }
+
+        @include respon_700 {
+            text-align: center;
+            margin: 0 auto;
+            display: flow-root;
+        }
+
+        @include respon_475 {
+            margin: 0 auto;
+        }
+
+        @include respon_375 {
+            height: 50px;
+            padding: 17px 40px;
+            font-size: 14px;
+        }
+    }
+
+    &--plan {
+        border: 2px solid $color-primary;
+        border-radius: 50px;
+        padding: 13px 63px;
+        color: $color-primary;
+        font-weight: 700;
+        margin-bottom: 50px;
+
+        &:hover {
+            background: $color-primary;
+            color: $color-white;
+            box-shadow: 4px 14px 20px rgba(245, 56, 56, 0.35)
+        }
+
+        @include respon_768 {
+            padding: 12px 45px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &--sub {
+        line-height: 0;
+        height: 60px;
+
+        @include respon_425 {
+            padding: 17px 47px;
+        }
+
+        @include respon_700 {
+            padding: 15px 26px;
+            margin-top: 20px;
+            font-size: 14px;
+            height: 50px;
+        }
+
+        @include respon_475 {
+            height: 44px;
+        }
+
+        @include respon_320 {
+            margin-top: 10px;
+        }
+    }
+}
+
+// Comeback
+.comeback {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+
+    a {
+        &:focus, &:focus-visible {
+            border: none;
+            outline: none;
+        }
+
+        border: 2px solid $color-white;
+        background-color: $color-primary;
+        color: $color-white;
+        text-align: center;
+        width: 31px;
+        height: 31px;
+        font-size: 18px;
+        font-weight: bold;
+        background-size: 100% 100%;
+        display: none;
+        z-index: 100;
+        border-radius: 7px;
+            
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+
+        i {
+            font-size: 12px;
+            position: relative;
+            top: -3px;
+        }
+    }
+}
+
+.btn-4 {
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-4:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: 999;
+}
+
+.btn-4:hover {
+    &:after {
+      left: 120%;
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+}

@@ -1,0 +1,122 @@
+body {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-black;
+    background: $color-white;
+}
+
+.heading-primary {
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Rubik';
+    font-style: normal;
+    line-height: 70px;
+    color: $color-black;
+    margin-bottom: 20px;
+
+    @include respon_1200 {
+        font-size: 48px;
+        line-height: 66px;
+    }
+
+    @include respon_992 {
+        font-size: 44px;
+        line-height: 66px;
+    }
+
+    @include respon_768 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    @include respon_425 {
+        font-size: 36px;
+    }
+
+    @include respon_475 {
+        font-size: 32px;
+        line-height: 45px;
+        margin-bottom: 10px;
+    }
+
+    @include respon_375 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+.heading-secondary {
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Rubik';
+    font-style: normal;
+    line-height: 50px;
+    color: $color-black;
+    margin-bottom: 20px;
+
+    @include respon_768 {
+        margin-bottom: 16px;
+        font-size: 28px;
+        line-height: 40px !important;
+    }
+
+    @include respon_425 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    @include respon_320 {
+        line-height: 36px !important;
+    }
+
+
+}
+
+.paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    font-style: normal;
+    color: $color-black-light;
+    margin-bottom: 20px;
+
+    @include respon_1200 {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    @include respon_768 {
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 16px;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    @include respon_425 {
+        line-height: 24px;
+    }
+
+    @include respon_320 {
+        font-size: 12px ;
+    }
+}
+
+.title--sub {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    font-style: normal;
+    color: $color-black;
+
+    @include respon_768 {
+        font-size: 12px;
+        line-height: 24px;
+    }
+}

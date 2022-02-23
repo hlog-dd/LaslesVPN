@@ -1,0 +1,58 @@
+.subcribe {
+    z-index: 2;
+    margin-top: -112px;
+    background: $color-white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 58.5px 70px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.10);
+
+    @include respon_992 {
+        padding: 50px 70px;
+    }
+
+    @include respon_768 {
+        padding: 40px 50px;
+    }
+
+    @include respon_425 {
+        padding: 35px;
+    }
+
+    @include respon_700 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    @include respon_475 {
+        padding: 20px;
+    }
+
+    @include respon_375 {
+        padding: 15px;
+    }
+
+    .paragraph {
+        margin: 0;
+        line-height: 14px;
+
+        @include respon_992 {
+            line-height: 20px;
+        }
+    }
+
+    .heading-secondary {
+        margin-bottom: 12px;
+        line-height: 45px;
+    }
+
+    &__heading {
+        max-width: 371px;
+        width: 100%;
+    }
+
+
+}

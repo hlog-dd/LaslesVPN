@@ -1,0 +1,241 @@
+.testimonial {
+
+    .heading-secondary {
+        max-width: 383px;
+        width: 100%;    
+        margin: 0 auto 20px;
+        text-align: center;
+
+        @include respon_375 {
+            max-width: 300px;
+            margin: 0 auto 15px;
+        }
+    }
+
+    .paragraph {
+        max-width: 555px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        @include respon_768 {
+            max-width: 500px;
+        }
+
+        @include respon_375 {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    &__logo {
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            filter: drop-shadow(0px 2px 5px rgba(0,0,0, 0.1));
+        }
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        padding-top: 60px;
+
+        @include respon_992 {
+            padding-top: 50px;
+        }
+
+        @include respon_425 {
+            padding-top: 40px;
+        }
+
+        @include respon_375 {
+            padding-top: 26px;
+        }
+    }
+
+    &__box {
+        padding: 30px;
+        border: 2px solid #dddddd;
+        border-radius: 10px;
+        max-width: 400px;
+        height: 230px;
+        box-shadow: 0px 20px 40px rgba(0,0,0, 0.03);
+        transition: all .3s;
+
+        &:hover {
+            border: 2px solid $color-primary !important;
+        }
+
+        @include respon_992 {
+            padding: 20px;
+        }
+
+        @include respon_768 {
+            height: 200px;
+            max-width: 370px;
+        }
+
+        @include respon_475 {
+            max-width: 100%;
+        }
+
+
+        &--head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--left {
+            display: flex;
+            align-items: center;
+        }
+
+        p.paragraph {
+            margin-top: 20px;
+            text-align: left;
+            line-height: 26px;
+            color: $color-black;
+        }
+    }
+
+    &__content {
+        margin-left: 20px;
+
+        @include respon_768 {
+            margin-left: 10px;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 18px;
+        font-style: normal;
+        line-height: 22px;
+        color: $color-black;
+
+        @include respon_768 {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__rating {
+        &--quantity {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-right: 12px;
+        }
+    }
+
+    .swiper-container {
+        padding-left: 2px;
+    }
+
+    .swiper-wrapper {
+        margin-bottom: 60px;
+
+        @include respon_768 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        width: auto;
+        bottom: 14px;
+    }
+
+    .swiper-controls {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .swiper-pagination-bullet {
+        width: 15px; 
+        height: 15px; 
+        background: #DDE0E4; 
+        border: 1px solid #DDE0E4; 
+        margin: 0 15px 0 0;
+        opacity: 1; 
+
+        @include respon_768 {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    .swiper-pagination-bullet-active { 
+        width: 45px; 
+        height: 15px;
+        transition: width .5s; 
+        border-radius: 15px; 
+        background: $color-primary; 
+        border: 1px solid transparent; 
+
+        @include respon_768 {
+            width: 36px;
+            height: 12px;
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        background: none;
+        position: unset;
+        top: auto;
+        margin: 0;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all .3s;
+        z-index: 10;
+
+        @include respon_768 {
+            width: 40px;
+            height: 40px;
+        }
+
+        &:hover {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .swiper-button-prev {
+        background-color: $color-white !important;
+        border: 1px solid $color-primary;
+        margin-right: 20px;
+
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+      
+    .swiper-button-next {
+        background: $color-primary !important;
+
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+    
+  
+
+    // .swiper-slide {
+    //     text-align: center;
+
+    //     &-active .testimonial__box {
+    //         border: 2px solid $color-primary !important;
+    //     }
+    // }
+
+}
